@@ -1,10 +1,6 @@
 function AlgorithmSortingSimplest(arr) {
   let result = [arr[0]]
   for (let i = 1; i < arr.length; i++) {
-    if (arr[i] >= result[result.length - 1]) {
-      result.push(arr[i])
-      continue
-    }
     result.push(arr[i])
     for (let j = result.length - 2; result[j] > result[j + 1] && j >= 0; j--) {
       let temp = result[j]
