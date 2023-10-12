@@ -2,10 +2,12 @@ function AlgorithmSortingSimplest(arr) {
   let result = [arr[0]]
   for (let i = 1; i < arr.length; i++) {
     result.push(arr[i])
-    for (let j = result.length - 2; result[j] > result[j + 1] && j >= 0; j--) {
+    let j = result.length - 2
+    while (result[j] > result[j + 1]) {
       let temp = result[j]
       result[j] = result[j + 1]
       result[j + 1] = temp
+      j--
     }
   }
   console.log(result)
